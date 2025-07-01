@@ -77,10 +77,21 @@ WSGI_APPLICATION = "app.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
-    }
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME":"dj_ctl_comb",
+        "USER":"postgres",
+        "PASSWORD":"postgres",
+        "HOST": "db",
+        "PORT": "5432"
+    },
 }
+
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.sqlite3",
+#         "NAME": BASE_DIR / "db.sqlite3",
+#     }
+# }
 
 
 # Password validation
@@ -107,7 +118,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = "es-mx"
 
-TIME_ZONE = "Mexico_City"
+TIME_ZONE = "America/Mexico_City"
 
 USE_I18N = True
 
